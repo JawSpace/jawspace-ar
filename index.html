@@ -18,10 +18,9 @@
         <a-entity
           position="0 0.5 0"
           rotation="0 0 0"
-          scale="0.10 0.01 0.1"
-          animation__scale="property: scale; to: 0.8 0.8 0.8; dur: 1500; ease: easeInOutCubic;"
           animation__rot="property: rotation; to: 0 360 0; loop: true;  dur: 5000; easing: linear;"
-          animation__bounce="property: position; dir: alternate; dur: 800; ease: easeOutBounce; loop: 1000; to: 0 0.65 0;"
+          animation__bounce="property: position; dir: alternate; dur: 800; ease: easeOutBounce; loop: 1000; to: 0 0.65 0; startEvents: scaleup-ended;"
+          animation__scale="property: scale; from: 0.7 0.7 0.7; to: 0.8 0.8 0.8; dir: alternate; dur: 500; loop: true;"
           gltf-model="#tree"
         >
         </a-entity>

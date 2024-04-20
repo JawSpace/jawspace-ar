@@ -5,23 +5,19 @@
     <script type="text/javascript" src="aframe-ar.js"></script>
   </head>
   <body style="margin: 0px; overflow: hidden">
-    <a-scene
-      embedded
-      vr-mode-ui="enabled: false;"
-      arjs="debugUIEnabled: false;"
-    >
+    <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: true;">
       <a-assets>
-        <a-asset-item id="tree" src="jawspace-logo.gltf"></a-asset-item>
+        <a-asset-item id="model" src="jawspace-logo.gltf"></a-asset-item>
       </a-assets>
 
-      <a-marker type="pattern" url="pattern-qr-code.patt">
+      <a-marker type="pattern" url="pattern.patt">
         <a-entity
           position="0 0.5 0"
           rotation="0 0 0"
           animation__rot="property: rotation; to: 0 360 0; loop: true;  dur: 5000; easing: linear;"
           animation__bounce="property: position; dir: alternate; dur: 800; ease: easeOutBounce; loop: 1000; to: 0 0.65 0; startEvents: scaleup-ended;"
           animation__scale="property: scale; from: 0.7 0.7 0.7; to: 0.8 0.8 0.8; dir: alternate; dur: 500; loop: true;"
-          gltf-model="#tree"
+          gltf-model="#model"
         >
         </a-entity>
       </a-marker>
